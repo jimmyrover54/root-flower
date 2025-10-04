@@ -35,6 +35,15 @@ ul {
     align-items: center;
 }
 
+.content h2 {
+    margin-top: px;
+}
+
+.content p {
+    font-size: 1.1rem;
+    line-height:1.5;
+}
+
 /* header, navbar */
 
 header {
@@ -109,7 +118,7 @@ nav {
     margin: 0 20px;
 }
 
-/* profile pages */
+/* Profile Pages */
 
 .pfp {
     width: 80%;
@@ -117,22 +126,98 @@ nav {
 }
 
 .profile-table {
-    width: 80%;
-    max-width: 800px;
+    width: 95%;
+    max-width: 950px;
     border: 1px solid #000000;
     border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 18px;
+    margin: 20px auto;
+    font-size: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .profile-table tr th, .profile-table tr td {
     text-align: left;
     border: 1px solid #000000;
-    padding: 8px;
+    padding: 10px;
 }
 
+/* Additional Profile Content */
+.profile-pic {
+    float: center;
+    border: 5px groove #333;
+    padding: 20px;
+    max-width: 500px;
+    height: 400px;
+    margin-top: 35px;
+}
 
+.profile-name {
+    font-size: 200%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.profile-student-no {
+    font-family: Arial;
+}
+
+.profile-course {
+    color: rgb(255, 4, 188)
+}
+
+.profile-mailto {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* Enquiry Form */
+
+#enquiry-text {
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 0 20px auto;
+}
+form {
+    margin: 20px auto;
+    max-width: 700px;
+    width: 100%;
+}
+
+fieldset {
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.3rem; 
+}
+
+#firstname, #lastname, #email, #phone, #enquiry, #comments {
+    width: 95%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+#submit-form-btn {
+    border:none;
+    color: white;
+    background-color: #660000;
+    text-align: center;
+    border-radius: 8px;
+    padding: 12px 30px;
+    font-weight:bold;
+    font-size: 1rem;
+}
 
 /* footer */
 
@@ -144,6 +229,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-style:italic;
 }
 
 footer div {
