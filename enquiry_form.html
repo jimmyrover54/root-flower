@@ -48,6 +48,46 @@
     </header>
 
     <div class="content">
+        <br>
+        <h2>Enquiry Form</h2>
+        <p id="enquiry-text">Any questions about our products, workshops or membership, please fill
+            in the form below and wait for us to get back to you soon
+        </p>
+
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Contact Information</legend>
+                <label for="firstname">First Name:</label>
+                <input type="text" id="firstname" name="firstname" maxlength="25"
+                pattern="[A-Za-z]+" required><br><br>
+
+                <label for="lastname">Last Name:</label>
+                <input type="text" id="lastname" name="lastname" maxlength="25"
+                pattern="[A-Za-z]+" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="phone">Mobile Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="e.g: 0123456789"
+                pattern="[0-9]{10}" required><br><br>
+
+                <label for="enquiry">Enquiry Type:</label>
+
+                <select id="enquiry" name="enquiry" required>
+                    <option value="products">Products</option>
+                    <option value="membership">Membership</option>
+                    <option value="workshop">Workshop</option>
+
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Comments</legend>
+                <textarea name="comments" id="comments" rows="5" cols="40" required></textarea>
+            </fieldset>
+
+            <button id="submit-form-btn" type="submit">Submit Form</button>
+        </form>
 
     </div>
 
