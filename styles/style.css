@@ -313,6 +313,145 @@ select {
     padding: 10px;
 }
 
+/* Product */
+.product-content {
+    display: block;
+    align-items: center;
+}
+
+.product-content h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.product-content h2, p {
+    margin-left: 20px;
+}
+
+.product-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 15px;
+  justify-items: center;
+  align-items: start;
+  margin: 10px 10px;
+}
+
+.product-gallery img {
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+
+.product-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.product-gallery figcaption {
+  grid-column: span 2; 
+  text-align: center;
+  margin-top: 10px;
+  font-style: italic;
+  color: #660000;
+}
+
+/* Product Align */ 
+.product-main {
+  display: block; 
+  width: 95vw;
+  max-width: none;
+  margin: 0 auto;
+  padding: 0 10px;
+  overflow: hidden; 
+}
+
+.product-align {
+  width: 65%; 
+  float: left; 
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-top: 60px;
+}
+
+
+/* Product page specific sections */
+.product-section {
+    margin: 10px auto;
+    width: 95%;
+    max-width: 900px;
+    padding: 20px;
+    background-color: #fffaf7;
+    border: 1px solid #f0dcd3;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+}
+
+.product-section h2 {
+    color: #660000;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #e0a899;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.product-section dl {
+    margin: 0;
+    padding: 0 15px;
+}
+
+.product-section dt {
+    font-weight: bold;
+    color: #4b0000;
+    margin-top: 10px;
+}
+
+.product-section dd {
+    margin-left: 20px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.product-section ol {
+    padding-left: 30px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.product-section ol li {
+    margin: 8px 0;
+}
+
+/* Product page aside box */
+.product-aside {
+  width: 30%; 
+  float: right; 
+  border: 3px solid #660000; 
+  background-color: #fff0f0;
+  padding: 20px;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 0;
+  font-style: italic;
+  margin-top: 70px; 
+}
+
+
+.product-aside h2 {
+    color: #660000;
+    text-align: center;
+}
+
+.product-aside p {
+    text-align: justify;
+    color: #333;
+}
 /* footer */
 
 footer {
