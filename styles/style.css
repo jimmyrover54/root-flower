@@ -1,7 +1,9 @@
 /* general */
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "URW Bookman L", serif;
+    color: #4d0000;
+    background-color:#eeb57e ;
     width: auto;
     min-height: 100vh;
     margin: 0;
@@ -25,10 +27,11 @@ ul {
 
 .white-text,
 .white-text a {
-    color: white;
+    color:  #ffffff;
 }
 
 .content {
+    width: 90vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -85,8 +88,16 @@ nav {
     justify-content: left;
 }
 
-.nav-menu li {
+.nav-menu li,
+#login {
     margin: 0 20px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.nav-menu li:hover,
+#login:hover {
+    background-color:#770000;
 }
 
 .dropdown {
@@ -99,6 +110,7 @@ nav {
     font-weight: 500;
     display: none;
     position: absolute;
+    border-radius: 5px;
 }
 
 .dropdown-content li {
@@ -138,85 +150,136 @@ nav {
 .profile-table tr th, .profile-table tr td {
     text-align: left;
     border: 1px solid #000000;
-    padding: 10px;
+    padding: 8px;
 }
 
-/* Additional Profile Content */
-.profile-pic {
-    float: center;
-    border: 5px groove #333;
-    padding: 20px;
-    max-width: 500px;
-    height: 400px;
-    margin-top: 35px;
-}
+/*forms*/
 
-.profile-name {
-    font-size: 200%;
-    text-align: center;
-    font-weight: bold;
-}
-
-.profile-student-no {
-    font-family: Arial;
-}
-
-.profile-course {
-    color: rgb(255, 4, 188)
-}
-
-.profile-mailto {
-    margin-top: 20px;
-    margin-bottom: 40px;
-    text-align: center;
-    text-decoration: underline;
-}
-
-/* Enquiry Form */
-
-#enquiry-text {
-    text-align: center;
-    font-size: 1.1rem;
-    margin: 0 20px auto;
-}
 form {
-    margin: 20px auto;
-    max-width: 700px;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 70vw;
+    margin: 20px 0;
 }
 
 fieldset {
-    margin-bottom: 15px;
-    padding: 15px 20px;
-    border: 2px solid #eee;
-    border-radius: 8px;
-    background: #fafafa;
+    border: 0;
+    margin-bottom: 30px;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 legend {
-    font-weight: bold;
-    font-size: 1.3rem; 
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    padding: 0;    
 }
 
-#firstname, #lastname, #email, #phone, #enquiry, #comments {
-    width: 95%;
-    padding: 10px;
-    margin-top: 8px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
+label {
+    font-size: 16px;
+    font-weight: 550;
+}
+
+input,
+textarea,
+select {
+    background-color: #ffffff;
+    border: 2px solid  #800000;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+input[type = submit]:hover,
+input[type = reset]:hover,
+input[type = date]:hover,
+select:hover {
+    background-color: #dddddd;
+}
+
+input[type = date] {
+    width: 100%;
+    height: 35px;
+    margin: 10px 0;
+    padding: 5px;
     box-sizing: border-box;
 }
 
-#submit-form-btn {
-    border:none;
-    color: white;
-    background-color: #660000;
-    text-align: center;
-    border-radius: 8px;
-    padding: 12px 30px;
-    font-weight:bold;
-    font-size: 1rem;
+select {
+    width: 100%;
+    height: 35px;
+    margin: 10px 0;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.singletext {
+    width: 98%;
+}
+
+.singletext input[type = text],
+.singletext input[type = tel],
+.singletext input[type = email],
+.singletext input[type = password] {
+    width: 100%;
+    height: 35px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+.twintext {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.twintext div {
+    margin-right: 20px;
+    flex-grow: 1;
+}
+.twintext div input[type="text"],
+.twintext div input[type="tel"],
+.twintext div input[type="email"] {
+    width: 100%;
+    height: 35px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+.selectdiv {
+    width: 100%;
+}
+
+
+.textareadiv {
+    width: 100%;
+}
+
+.textareadiv textarea {
+    width: inherit;
+    height: 100px;
+    margin: 10px 0;
+    padding: 5px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.subres {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.subres input[type = submit], 
+.subres input[type = reset] {
+    margin: 0px 15px;
+    padding: 10px;
 }
 
 /* footer */
