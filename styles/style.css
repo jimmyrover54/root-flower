@@ -143,14 +143,45 @@ nav {
     border: 1px solid #000000;
     border-collapse: collapse;
     margin: 20px auto;
-    font-size: 20px;
+    font-size: 25px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .profile-table tr th, .profile-table tr td {
     text-align: left;
     border: 1px solid #000000;
-    padding: 8px;
+    padding: 10px;
+}
+
+/* Additional Profile Content */
+.profile-pic {
+    float: center;
+    border: 5px groove #333;
+    padding: 20px;
+    max-width: 500px;
+    height: 600px;
+    margin-top: 20px;
+}
+
+.profile-name {
+    font-size: 200%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.profile-student-no {
+    font-family: Arial;
+}
+
+.profile-course {
+    color: rgb(255, 20, 212)
+}
+
+.profile-mailto {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+    text-decoration: underline;
 }
 
 /*forms*/
