@@ -38,6 +38,15 @@ ul {
     align-items: center;
 }
 
+.content h2 {
+    margin-top: px;
+}
+
+.content p {
+    font-size: 1.1rem;
+    line-height:1.5;
+}
+
 /* header, navbar */
 
 header {
@@ -121,7 +130,7 @@ nav {
     margin: 0 20px;
 }
 
-/* profile pages */
+/* Profile Pages */
 
 .pfp {
     width: 80%;
@@ -129,19 +138,50 @@ nav {
 }
 
 .profile-table {
-    width: 80%;
-    max-width: 800px;
+    width: 95%;
+    max-width: 950px;
     border: 1px solid #000000;
     border-collapse: collapse;
-    margin: 20px 0;
-    font-size: 18px;
+    margin: 20px auto;
+    font-size: 25px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .profile-table tr th, .profile-table tr td {
     text-align: left;
     border: 1px solid #000000;
-    padding: 8px;
+    padding: 10px;
+}
+
+/* Additional Profile Content */
+.profile-pic {
+    float: center;
+    border: 5px groove #333;
+    padding: 20px;
+    max-width: 500px;
+    height: 600px;
+    margin-top: 20px;
+}
+
+.profile-name {
+    font-size: 200%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.profile-student-no {
+    font-family: Arial;
+}
+
+.profile-course {
+    color: rgb(255, 20, 212)
+}
+
+.profile-mailto {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    text-align: center;
+    text-decoration: underline;
 }
 
 /*forms*/
@@ -273,6 +313,146 @@ select {
     padding: 10px;
 }
 
+/* Product */
+.product-content {
+    display: block;
+    align-items: center;
+}
+
+.product-content h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.product-content h2, p {
+    margin-left: 20px;
+}
+
+.product-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 15px;
+  justify-items: center;
+  align-items: start;
+  margin: 10px 10px;
+}
+
+.product-gallery img {
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+
+.product-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.product-gallery figcaption {
+  grid-column: span 2; 
+  text-align: center;
+  margin-top: 10px;
+  font-style: italic;
+  color: #660000;
+}
+
+/* Product Align */ 
+.product-main {
+  display: block; 
+  width: 95vw;
+  max-width: none;
+  margin: 0 auto;
+  padding: 0 10px;
+  overflow: hidden; 
+}
+
+.product-align {
+  width: 65%; 
+  float: left; 
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-top: 60px;
+}
+
+
+/* Product page specific sections */
+.product-section {
+    margin: 10px auto;
+    width: 95%;
+    max-width: 900px;
+    padding: 20px;
+    background-color: #fffaf7;
+    border: 1px solid #f0dcd3;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+}
+
+.product-section h2 {
+    color: #660000;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #e0a899;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.product-section dl {
+    margin: 0;
+    padding: 0 15px;
+}
+
+.product-section dt {
+    font-weight: bold;
+    color: #4b0000;
+    margin-top: 10px;
+}
+
+.product-section dd {
+    margin-left: 20px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.product-section ol {
+    padding-left: 30px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.product-section ol li {
+    margin: 8px 0;
+}
+
+/* Product page aside box */
+.product-aside {
+  width: 30%; 
+  float: right; 
+  border: 3px solid #660000; 
+  background-color: #fff0f0;
+  padding: 20px;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 0;
+  font-style: italic;
+  margin-top: 70px; 
+}
+
+
+.product-aside h2 {
+    color: #660000;
+    text-align: center;
+}
+
+.product-aside p {
+    text-align: justify;
+    color: #333;
+}
 /* footer */
 
 footer {
@@ -283,6 +463,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-style:italic;
 }
 
 footer div {
