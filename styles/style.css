@@ -477,7 +477,7 @@ section {
 }
 
 /* ===========================
-   WORKSHOP CARD LAYOUT (Updated)
+   WORKSHOP CARD LAYOUT 
 =========================== */
 
 .workshop-container {
@@ -595,56 +595,6 @@ section {
     }
 }
 
-/* ===========================
-   WORKSHOP BENEFITS SECTION
-=========================== */
-.benefits-section {
-    background-color: #fff5e1;
-    border: 3px solid #990000;
-    border-radius: 25px;
-    width: 80%;
-    margin: 60px auto;
-    padding: 40px 50px;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-    text-align: center;
-    animation: fadeIn 1s ease-in-out;
-}
-
-.benefits-section h2 {
-    color: #660000;
-    font-size: 28px;
-    margin-bottom: 25px;
-    letter-spacing: 1px;
-}
-
-.benefits-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 18px;
-    line-height: 2;
-    color: #4d0000;
-}
-
-.benefits-section li {
-    background-color: #fce3cc;
-    border-radius: 12px;
-    padding: 12px 20px;
-    margin: 10px 0;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, background-color 0.3s ease;
-}
-
-.benefits-section li:hover {
-    transform: scale(1.03);
-    background-color: #ffd9b3;
-}
-
-/* Fade-in animation */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
 
 /* ===========================
    WORKSHOP COURSE TABLE
@@ -702,72 +652,573 @@ section {
 
 
 /* ===========================
-   HIGHLIGHT ANIMATION (Cell-based Fix)
+   CSS-ONLY TARGET HIGHLIGHT
 =========================== */
-@keyframes highlightFade {
-  0% {
-    background-color: #fff8b3;
-    box-shadow: 0 0 20px #ffeb80 inset;
-  }
-  50% {
-    background-color: #fff176;
-    box-shadow: 0 0 25px #ffea00 inset;
-  }
-  100% {
-    background-color: #fff5e1;
-    box-shadow: none;
-  }
+
+.course-table tr:target td {
+  background-color: #fff7b3;
+  box-shadow: inset 0 0 12px #ffde59;
+  animation: fadeBack 4s ease-in-out forwards;
 }
 
-.highlighted td {
-  animation: highlightFade 3s ease-in-out;
-  transition: background-color 1s ease;
+/* fade highlight back to normal */
+@keyframes fadeBack {
+  0% { background-color: #fff7b3; }
+  50% { background-color: #ffeb80; }
+  100% { background-color: #fff5e1; }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* ===========================
-   WORKSHOP PAGE ASIDE SECTION
+   WORKSHOP BENEFITS + ASIDE SECTION (Final Polished)
 =========================== */
+.benefits-aside-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 85%;
+  margin: 60px auto;
+  gap: 40px;
+}
 
-.registration-aside {
-  width: 80%;
+/* Restored elegant benefits design */
+.benefits-section {
+  flex: 3;
   background-color: #fff5e1;
   border: 3px solid #990000;
-  border-radius: 15px;
-  padding: 25px 30px;
-  margin: 50px auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  color: #4d0000;
+  border-radius: 25px;
+  padding: 40px 50px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.benefits-section h2 {
+  color: #660000;
+  font-size: 28px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.benefits-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 2;
+  color: #4d0000;
+}
+
+.benefits-section li {
+  background-color: #fce3cc;
+  border-radius: 12px;
+  padding: 12px 20px;
+  margin: 10px 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.benefits-section li:hover {
+  transform: scale(1.03);
+  background-color: #ffd9b3;
+}
+
+/* ===========================
+   Aside on Right
+=========================== */
+.float-aside {
+  flex: 1;
+  align-self: flex-start;
+  background-color: #fff5e1;
+  border: 3px solid #990000;
+  border-radius: 20px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  color: #4d0000;
+  font-size: 17px;
+  line-height: 1.8;
+  padding: 35px 20px 40px;
+  margin-top: 10px;
+  height: 450px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+/* Title */
+.float-aside h2 {
+  color: #660000;
+  font-size: 24px;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+  border-bottom: 2px solid #990000;
+  padding-bottom: 8px;
+}
+
+/* Decorative divider */
+.float-aside::after {
+  content: "🌷🌸🌼";
+  display: block;
+  font-size: 22px;
+  margin: 15px 0;
+  color: #990000;
+}
+
+/* Buttons */
+.aside-btn {
+  display: inline-block;
+  width: 75%;
+  background: linear-gradient(180deg, #990000 0%, #660000 100%);
+  color: #fff;
+  padding: 12px 20px;
+  margin: 15px auto;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(153, 0, 0, 0.3);
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.aside-btn:hover {
+  background: linear-gradient(180deg, #b30000 0%, #800000 100%);
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(153, 0, 0, 0.4);
+}
+
+/* Responsive layout */
+@media screen and (max-width: 900px) {
+  .float-aside {
+    width: 90%;
+    height: auto;
+    margin-top: 20px;
+  }
+  .aside-btn {
+    width: 80%;
+  }
+}
+
+
+/* ===========================
+   PROMOTIONS PAGE
+=========================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.clear { clear: both; }
+
+/* ===========================
+   HERO SECTION (Promo Banner)
+=========================== */
+.promo-hero {
+  position: relative;
+  width: 55%;
+  margin: 25px auto 40px auto;
+  background-color: #fff5e1;
+  border: 3px solid #990000;
+  border-radius: 22px;
+  padding: 12px 18px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+  overflow: hidden;
+}
+
+.promo-image-wrapper {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.promo-hero img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: center 35%;
+  border-radius: 12px;
+  filter: brightness(0.85) blur(0.3px);
+}
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.05));
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+.promo-hero figcaption {
+  font-style: italic;
+  margin-top: 10px;
+  color: #4d0000;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInCard {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===========================
+   SECTION LAYOUT
+=========================== */
+.promo-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 85%;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.promo-section {
+  width: 65%;
+  background-color: #fff5e1;
+  border: 3px solid #990000;
+  border-radius: 25px;
+  padding: 28px 30px;
+  margin-bottom: 45px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.promo-section h2 {
+  color: #660000;
+  font-size: 26px;
+  text-align: center;
+  border-bottom: 2px solid #990000;
+  display: inline-block;
+  padding-bottom: 6px;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* ===========================
+   CURRENT OFFERS GRID
+=========================== */
+.deal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.deal-card {
+  background: #ffffff;
+  border: 2px solid #990000;
+  border-radius: 16px;
+  padding: 18px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: fadeInCard 1.2s ease forwards;
+  opacity: 0;
+}
+
+.deal-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.18);
+}
+
+.deal-card .badge {
+  display: inline-block;
+  background: #990000;
+  color: #fff;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.deal-card h3 {
+  color: #660000;
+  margin: 6px 0 8px;
+  font-size: 18px;
+}
+
+/* ===========================
+   INLINE ASIDE (MATCHING CURRENT OFFERS STYLE)
+=========================== */
+.offers-aside-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 25px;
+  width: 85%;
+  margin: 0 auto 40px auto;
+}
+
+/* Keep the Current Offers slightly narrower */
+.current-offers {
+  flex: 1 1 68%;
+}
+
+/* Aside beside offers */
+.promo-inline-aside {
+  flex: 0 0 28%;
+  background: #fff5e1;
+  border: 2px solid #990000;
+  border-radius: 16px;
+  padding: 25px 30px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  color: #4d0000;
+  animation: fadeIn 1.2s ease-in-out;
+  margin-top: 22px;
+  min-height: 575px; /* keep your chosen height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* no more stretched spacing */
+  align-items: center; /* keeps text centered horizontally */
+  gap: 15px; /* adds comfortable spacing between elements */
+}
+
+.promo-inline-aside h2 {
+  color: #660000;
+  font-size: 22px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #990000;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.promo-inline-aside p {
+  line-height: 1.5;
+  margin: 6px 0 10px;
+}
+
+/* Buttons (same design language as deal cards) */
+.promo-inline-aside .aside-btn {
+  display: block;
+  background: linear-gradient(180deg, #990000 0%, #660000 100%);
+  color: #ffffff;
+  padding: 10px 16px;
+  margin: 10px auto;
+  width: 85%;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(153, 0, 0, 0.25);
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.promo-inline-aside .aside-btn:hover {
+  background: linear-gradient(180deg, #b30000 0%, #7a0000 100%);
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(153, 0, 0, 0.35);
+}
+
+/* Responsive fix */
+@media screen and (max-width: 980px) {
+  .offers-aside-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .current-offers,
+  .promo-inline-aside {
+    width: 90%;
+  }
+}
+
+/* ===========================
+   PROMOTIONS OVERVIEW TABLE
+=========================== */
+.promo-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+.promo-table th {
+  background-color: #990000;
+  color: #fff;
+  padding: 14px;
   text-align: center;
 }
 
-.registration-aside h2 {
-  color: #660000;
-  font-size: 26px;
-  margin-bottom: 15px;
+.promo-table td {
+  border: 1.5px solid #800000;
+  background-color: #fff5e1;
+  color: #4d0000;
+  padding: 14px;
+  vertical-align: top;
 }
 
-.registration-aside a {
+.promo-table tr:hover td {
+  background-color: #ffd9b3;
+  transition: background-color 0.3s ease;
+}
+
+/* ===========================
+   HOW TO REDEEM SECTION
+=========================== */
+#how-to-redeem {
+  background-color: #fff5e1;
+  border: 3px solid #990000;
+  border-radius: 25px;
+  padding: 32px 38px;
+  margin-top: 40px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 1s ease-in-out;
+}
+
+#how-to-redeem h2 {
+  color: #660000;
+  font-size: 26px;
+  text-align: center;
+  border-bottom: 2px solid #990000;
+  display: inline-block;
+  padding-bottom: 6px;
+  margin-bottom: 20px;
+}
+
+#how-to-redeem ol {
+  list-style: decimal-leading-zero;
+  padding-left: 35px;
+  color: #4d0000;
+  line-height: 1.9;
+  font-size: 17px;
+}
+
+#how-to-redeem li {
+  background-color: #ffffff;
+  border-left: 5px solid #990000;
+  border-radius: 12px;
+  padding: 12px 18px;
+  margin: 10px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+#how-to-redeem li:hover {
+  transform: translateX(6px);
+  background-color: #ffd9b3;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+#how-to-redeem a {
   color: #990000;
   font-weight: bold;
   text-decoration: underline;
   transition: color 0.3s ease;
 }
 
-.registration-aside a:hover {
+#how-to-redeem a:hover {
+  color: #660000;
+}
+
+/* ===========================
+   PROMO GLOSSARY SECTION
+=========================== */
+#promo-glossary {
+  background-color: #fff5e1;
+  border: 3px solid #990000;
+  border-radius: 25px;
+  padding: 32px 38px;
+  margin-top: 40px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 1s ease-in-out;
+}
+
+#promo-glossary h2 {
+  color: #660000;
+  font-size: 26px;
+  text-align: center;
+  border-bottom: 2px solid #990000;
+  display: inline-block;
+  padding-bottom: 6px;
+  margin-bottom: 20px;
+}
+
+/* Glossary cards (similar to How to Redeem) */
+.promo-dl {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-left: 0;
+}
+
+.promo-dl dt {
+  font-weight: 700;
+  color: #660000;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.promo-dl dd {
+  background-color: #ffffff;
+  border-left: 5px solid #990000;
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin: 0;
+  color: #4d0000;
+  line-height: 1.7;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.promo-dl dd:hover {
+  transform: translateX(6px);
+  background-color: #ffd9b3;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Glossary Links */
+.promo-dl a {
+  color: #990000;
+  font-weight: bold;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.promo-dl a:hover {
   color: #660000;
   text-decoration: none;
 }
 
-/* Responsive */
-@media screen and (max-width: 768px) {
-  .registration-aside {
+/* ===========================
+   RESPONSIVE LAYOUT
+=========================== */
+@media screen and (max-width: 980px) {
+  .promo-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .promo-section,
+  .promo-hero,
+  #promo-glossary {
     width: 90%;
-    font-size: 16px;
-    padding: 20px;
+    padding: 25px 20px;
+  }
+
+  #how-to-redeem ol {
+    padding-left: 20px;
   }
 }
+
 
 /* footer */
 

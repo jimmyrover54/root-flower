@@ -1,75 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles/style.css" rel="stylesheet">
-    <title>Promotions - Root Flower</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="styles/style.css" rel="stylesheet" />
+  <title>Promotions - Root Flower</title>
 </head>
+
 <body>
-    <header class="white-text">
-        <div class="top">
-            <img class="logo" src="styles/images/logo.jpg">
-            <div id="title"><a href=index.html>root flower</a></div>
+  <header class="white-text">
+    <div class="top">
+      <img class="logo" src="styles/images/logo.jpg" alt="Root Flower Logo">
+      <div id="title"><a href="index.html">root flower</a></div>
+    </div>
+    <nav>
+      <ul class="nav-menu">
+        <li class="dropdown">
+          Products
+          <ul class="dropdown-content">
+            <li><a href="product1.html">Hand Bouquets</a></li>
+            <li><a href="product2.html">CNY Decorations</a></li>
+            <li><a href="product3.html">Grand Openings</a></li>
+            <li><a href="product4.html">Graduation</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          Activities
+          <ul class="dropdown-content">
+            <li><a href="workshops.html">Workshops</a></li>
+            <li><a href="promo.html">Promotions</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          Registration
+          <ul class="dropdown-content">
+            <li><a href="workshop_form.html">Workshop Registration</a></li>
+            <li><a href="membership_form.html">Membership Registration</a></li>
+          </ul>
+        </li>
+        <li><a href="enquiry_form.html">Enquiry Form</a></li>
+      </ul>
+      <div id="login"><a href="login_form.html">Login</a></div>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h1>Promotions & Membership Perks</h1>
+
+    <!-- Hero Figure -->
+    <figure class="promo-hero">
+      <div class="promo-image-wrapper">
+        <img src="styles/images/promo-hero.jpg" alt="Root Flower Flower Promotions">
+        <div class="image-overlay"></div>
+      </div>
+      <figcaption>Seasonal deals and member-only savings — updated regularly.</figcaption>
+    </figure>
+
+    <!-- Current Offers + Aside -->
+    <div class="offers-aside-container">
+      <!-- Current Offers -->
+      <section class="promo-section current-offers">
+        <h2>Current Offers</h2>
+        <div class="deal-grid">
+          <article class="deal-card">
+            <span class="badge">Early-Bird</span>
+            <h3>Save 8% on Early Registration</h3>
+            <p>Secure your seat 10 days before the workshop starts.</p>
+          </article>
+
+          <article class="deal-card">
+            <span class="badge">Bundle</span>
+            <h3>Complimentary Mini Arrangement</h3>
+            <p>Register for two workshops and receive a free floral mini craft kit.</p>
+          </article>
+
+          <article class="deal-card">
+            <span class="badge">Member</span>
+            <h3>Exclusive Previews</h3>
+            <p>Members get priority access to new class openings before the public.</p>
+          </article>
+
+          <article class="deal-card">
+            <span class="badge">Student</span>
+            <h3>RM10 Study Perk</h3>
+            <p>Discounted rate on weekday hobby classes — limited to 1 per month.</p>
+          </article>
+
+          <article class="deal-card">
+            <span class="badge">Birthday</span>
+            <h3>Free Gift</h3>
+            <p>Receive a complimentary floral charm or keychain during your birthday month.</p>
+          </article>
+
+          <article class="deal-card">
+            <span class="badge">Loyalty</span>
+            <h3>Collect & Bloom</h3>
+            <p>Earn 1 point per workshop — redeem for floral accessories after 5 points.</p>
+          </article>
         </div>
-        <nav>
-            <ul class="nav-menu">
-                <li class="dropdown">
-                    Products
-                    <ul class="dropdown-content">
-                        <li><a href="product1.html">Hand Bouquets</a></li>
-                        <li><a href="product2.html">CNY Decorations</a></li>
-                        <li><a href="product3.html">Grand Openings</a></li>
-                        <li><a href="product4.html">Graduation</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    Activities
-                    <ul class="dropdown-content">
-                        <li><a href="workshops.html">Workshops</a></li>
-                        <li><a href="promo.html">Promotions</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    Registration
-                    <ul class="dropdown-content">
-                        <li><a href="workshop_form.html">Workshop Registration</a></li>
-                        <li><a href="membership_form.html">Membership Registration</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="enquiry_form.html">Enquiry Form</a> 
-                </li>
-            </ul>
-            <div id="login">
-                <a href="login_form.html">Login</a>
-            </div>
-        </nav>
-    </header>
+      </section>
 
-    <div class="content">
-
+      <!-- Aside -->
+      <aside class="promo-inline-aside">
+        <h2>Join & Save 🌸</h2>
+        <p>
+          Become a <strong>Root Flower Member</strong> to unlock exclusive discounts,
+          birthday gifts, and early-bird perks.
+        </p>
+        <a href="membership_form.html" class="aside-btn">Join Membership</a>
+        <a href="workshops.html" class="aside-btn">View Workshops</a>
+      </aside>
     </div>
 
- <footer class="white-text">
-        <div class="fabout">
-            About Us:
-            <ul class="aboutlist">
-                <li><a href="aboutme1.html">Azmain Taraqqi</a></li>
-                <li><a href="aboutme4.html">Chan Chun Hui</a></li>
-            </ul>
-        </div>
-        <div class="fcontact">
-            Contact Us:
-            <ul class="contactlist">
-                <li>
-                    <a href="mailto:105804016@students.swinburne.edu.my">105804016@students.swinburne.edu.my</a>
-                </li>
-                <li>
-                    <a href="mailto:101235900@students.swinburne.edu.my">101235900@students.swinburne.edu.my</a>
-                </li>
-            </ul>
-        </div>
-    </footer>
+    <!-- Promotions Overview -->
+    <section class="promo-section" id="promotions-table">
+      <h2>Promotions Overview</h2>
+      <table class="promo-table">
+        <thead>
+          <tr>
+            <th>Promotion Type</th>
+            <th>Eligibility</th>
+            <th>Benefit</th>
+            <th>Validity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Early-Bird</td>
+            <td>All Customers</td>
+            <td>8% off total workshop fee</td>
+            <td>Register ≥10 days before workshop</td>
+          </tr>
+          <tr>
+            <td>Bundle Offer</td>
+            <td>Dual Workshop Sign-up</td>
+            <td>Free mini floral craft kit</td>
+            <td>Same transaction only</td>
+          </tr>
+          <tr>
+            <td>Member Perk</td>
+            <td>Registered Members</td>
+            <td>Priority access to new classes</td>
+            <td>While membership is active</td>
+          </tr>
+          <tr>
+            <td>Student Perk</td>
+            <td>Valid Student ID holders</td>
+            <td>RM10 discount on weekday Hobby Classes</td>
+            <td>1 redemption per month</td>
+          </tr>
+          <tr>
+            <td>Birthday Gift</td>
+            <td>All Customers</td>
+            <td>Free floral charm or keychain</td>
+            <td>Birthday month</td>
+          </tr>
+          <tr>
+            <td>Loyalty Reward</td>
+            <td>Repeat Participants</td>
+            <td>1 point per workshop — redeem after 5</td>
+            <td>Points valid 12 months</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- How to Redeem -->
+    <section class="promo-section" id="how-to-redeem">
+      <h2>How to Redeem</h2>
+      <ol>
+        <li>Choose your workshop and check available dates.</li>
+        <li>Complete the <a href="workshop_form.html">Workshop Registration Form</a>.</li>
+        <li>Enter your promo type (Early-Bird / Member / Bundle / Student) in the notes.</li>
+        <li>Attach proof if required (Member ID / Student ID).</li>
+        <li>Submit — we’ll confirm your discounted total by email.</li>
+      </ol>
+    </section>
+
+    <!-- Promo Glossary -->
+    <section class="promo-section" id="promo-glossary">
+      <h2>Promo Glossary</h2>
+      <dl class="promo-dl">
+        <dt>🌸 Early-Bird</dt>
+        <dd>Register 10 days before the workshop to receive 8% off.</dd>
+
+        <dt>🌼 Bundle Offer</dt>
+        <dd>Register for two workshops in one transaction to receive a free mini floral kit.</dd>
+
+        <dt>💐 Member Perk</dt>
+        <dd>Exclusive early access for registered members. <a href="membership_form.html">Join now</a>.</dd>
+
+        <dt>🎓 Student Perk</dt>
+        <dd>RM10 discount on weekday hobby classes with a valid Student ID.</dd>
+
+        <dt>🎁 Birthday Gift</dt>
+        <dd>Free floral charm or keychain during your birthday month.</dd>
+
+        <dt>🌷 Loyalty Reward</dt>
+        <dd>Earn 1 point per workshop — redeem floral accessories after 5 points.</dd>
+      </dl>
+    </section>
+
+    <div class="clear"></div>
+  </main>
+
+  <footer class="white-text">
+    <div class="fabout">
+      About Us:
+      <ul class="aboutlist">
+        <li><a href="aboutme1.html">Azmain Taraqqi</a></li>
+        <li><a href="aboutme4.html">Chan Chun Hui</a></li>
+      </ul>
+    </div>
+    <div class="fcontact">
+      Contact Us:
+      <ul class="contactlist">
+        <li><a href="mailto:105804016@students.swinburne.edu.my">105804016@students.swinburne.edu.my</a></li>
+        <li><a href="mailto:101235900@students.swinburne.edu.my">101235900@students.swinburne.edu.my</a></li>
+      </ul>
+    </div>
+  </footer>
 </body>
 </html>
