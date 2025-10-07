@@ -225,9 +225,15 @@ select {
     padding: 5px;
 }
 
-input:hover,
-select:hover,
-textarea:hover {
+input[type = text]:focus,
+input[type = email]:focus,
+input[type = tel]:focus,
+input[type = date]:focus,
+textarea:focus,
+input[type = submit]:hover,
+input[type = reset]:hover,
+select:hover
+ {
     background-color: #dddddd;
 }
 
@@ -312,7 +318,36 @@ select {
     padding: 10px;
 }
 
-/* Product */
+/* ===== Product Page Gallery (Jimmy) ===== */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.gallery figure {
+    width: 300px;
+    text-align: center;
+    border: 1px solid #f3b1c1;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fff0f5;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.gallery figcaption {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Product (CCH) */
 
 
 .product-content {
@@ -365,7 +400,7 @@ select {
   color: #660000;
 }
 
-/* Product Align */ 
+/* Product Align (CCH) */ 
 
 .product-main {
   display: block; 
@@ -383,7 +418,7 @@ select {
   margin: 20px 0;
 }
 
-/* Product page specific sections */
+/* Product page specific sections (CCH) */
 .product-section {
     text-align: center;
     width: auto;
@@ -431,7 +466,7 @@ select {
     margin: 8px 0;
 }
 
-/* Product page aside box */
+/* Product page aside box (CCH) */
 .product-aside {
     width: 10%; 
     height: auto;
@@ -454,7 +489,7 @@ select {
 }
 
 /* ===========================
-   ACTIVITY PAGES (Workshops & Promotions) [COMMENTED BECAUSE OF TYPE SELECTOR OVERRIDE]
+   ACTIVITY PAGES (Workshops & Promotions) (Dhirrenn) [COMMENTED BECAUSE OF TYPE SELECTOR OVERRIDE]
 =========================== */
 
 /* Heading */
@@ -476,7 +511,7 @@ select {
 } */
 
 /* ===========================
-   WORKSHOP CARD LAYOUT (Updated)
+   WORKSHOP CARD LAYOUT (Updated) (Dhirrenn)
 =========================== */
 
 .workshop-container {
@@ -562,7 +597,7 @@ select {
 }
 
 /* ===========================
-   RESPONSIVE DESIGN
+   RESPONSIVE DESIGN (Dhirrenn)
 =========================== */
 
 @media screen and (max-width: 768px) {
@@ -595,7 +630,7 @@ select {
 }
 
 /* ===========================
-   WORKSHOP BENEFITS SECTION
+   WORKSHOP BENEFITS SECTION (Dhirrenn)
 =========================== */
 .benefits-section {
     background-color: #fff5e1;
@@ -646,7 +681,7 @@ select {
 }
 
 /* ===========================
-   WORKSHOP COURSE TABLE
+   WORKSHOP COURSE TABLE (Dhirrenn)
 =========================== */
 
 .course-table-section {
@@ -701,7 +736,7 @@ select {
 
 
 /* ===========================
-   HIGHLIGHT ANIMATION (Cell-based Fix)
+   HIGHLIGHT ANIMATION (Cell-based Fix) (Dhirrenn)
 =========================== */
 @keyframes highlightFade {
   0% {
@@ -724,7 +759,7 @@ select {
 }
 
 /* ===========================
-   WORKSHOP PAGE ASIDE SECTION
+   WORKSHOP PAGE ASIDE SECTION (Dhirrenn)
 =========================== */
 
 .registration-aside {
