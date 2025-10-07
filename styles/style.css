@@ -225,10 +225,9 @@ select {
     padding: 5px;
 }
 
-input[type = submit]:hover,
-input[type = reset]:hover,
-input[type = date]:hover,
-select:hover {
+input:hover,
+select:hover,
+textarea:hover {
     background-color: #dddddd;
 }
 
@@ -396,7 +395,6 @@ select {
     box-shadow: 0 3px 6px rgba(0,0,0,0.08);
 }
 
-
 .product-section h2 {
     color: #660000;
     font-size: 1.8rem;
@@ -456,26 +454,26 @@ select {
 }
 
 /* ===========================
-   ACTIVITY PAGES (Workshops & Promotions)
+   ACTIVITY PAGES (Workshops & Promotions) [COMMENTED BECAUSE OF TYPE SELECTOR OVERRIDE]
 =========================== */
 
 /* Heading */
-h1 {
+/* h1 {
     font: bold 32px "URW Bookman L", serif;
     color: #660000;
     text-align: center;
     margin-top: 30px;
-}
+} */
 
 /* Section */
-section {
+/* section {
     margin: 20px auto;
     padding: 20px;
     background-color: #fce3cc;
     border-radius: 10px;
     width: 80%;
     box-sizing: border-box;
-}
+} */
 
 /* ===========================
    WORKSHOP CARD LAYOUT (Updated)
