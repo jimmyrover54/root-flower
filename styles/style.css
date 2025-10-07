@@ -133,7 +133,7 @@ nav {
 /* Profile Pages */
 
 .pfp {
-    width: 80%;
+    width: 40%;
     height: auto;
 }
 
@@ -314,9 +314,12 @@ select {
 }
 
 /* Product */
+
+
 .product-content {
     display: block;
     align-items: center;
+    width: 90vw;
 }
 
 .product-content h1 {
@@ -329,22 +332,25 @@ select {
 }
 
 .product-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  gap: 15px;
-  justify-items: center;
-  align-items: start;
-  margin: 10px 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px;
+    justify-items: center;
+    align-items: start;
+    margin: 30px 10px;
 }
 
-.product-gallery img {
-  width: 100%;
-  max-width: 350px;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+.product-gallery div {
+    text-align: center;
+    width: 70%;
+}
+
+.product-gallery div img {
+    height: 500px;
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
 }
 
 
@@ -361,9 +367,10 @@ select {
 }
 
 /* Product Align */ 
+
 .product-main {
   display: block; 
-  width: 95vw;
+  width: inherit;
   max-width: none;
   margin: 0 auto;
   padding: 0 10px;
@@ -371,27 +378,24 @@ select {
 }
 
 .product-align {
-  width: 65%; 
-  float: left; 
+  width: 85%; 
   display: flex;
   flex-direction: column;
-  gap: 25px;
-  padding-top: 60px;
+  margin: 20px 0;
 }
-
 
 /* Product page specific sections */
 .product-section {
-    margin: 10px auto;
-    width: 95%;
-    max-width: 900px;
+    text-align: center;
+    width: auto;
+    margin: 10px;
     padding: 20px;
     background-color: #fffaf7;
     border: 1px solid #f0dcd3;
     border-radius: 10px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.08);
-    margin-bottom: 30px;
 }
+
 
 .product-section h2 {
     color: #660000;
@@ -431,26 +435,23 @@ select {
 
 /* Product page aside box */
 .product-aside {
-  width: 30%; 
-  float: right; 
-  border: 3px solid #660000; 
-  background-color: #fff0f0;
-  padding: 20px;
-  border-radius: 10px;
-  margin-left: 10px;
-  margin-right: 0;
-  font-style: italic;
-  margin-top: 70px; 
+    width: 10%; 
+    height: auto;
+    float: right; 
+    border: 3px solid #660000; 
+    background-color: #fff0f0;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 40px 10px;
+    font-style: italic;
 }
 
 
 .product-aside h2 {
     color: #660000;
-    text-align: center;
 }
 
 .product-aside p {
-    text-align: justify;
     color: #333;
 }
 /* footer */
@@ -476,7 +477,7 @@ footer div ul {
     margin: 20px 0;
 }
 
-footer div ul:hover {
+footer div ul li:hover {
     text-decoration: underline;
 }
 
