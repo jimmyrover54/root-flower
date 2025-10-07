@@ -453,6 +453,322 @@ select {
     text-align: justify;
     color: #333;
 }
+
+/* ===========================
+   ACTIVITY PAGES (Workshops & Promotions)
+=========================== */
+
+/* Heading */
+h1 {
+    font: bold 32px "URW Bookman L", serif;
+    color: #660000;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Section */
+section {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fce3cc;
+    border-radius: 10px;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+/* ===========================
+   WORKSHOP CARD LAYOUT (Updated)
+=========================== */
+
+.workshop-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.workshop-card {
+    position: relative;
+    width: 300px;
+    height: 420px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.workshop-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+.workshop-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Floating box animation for Read More */
+.workshop-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(150%);
+    background-color: #ffffff;
+    color: #4d0000;
+    width: 85%;
+    border-radius: 14px;
+    padding: 15px 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.workshop-card:hover .workshop-overlay {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Text inside the overlay */
+.workshop-overlay h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.workshop-overlay p {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+/* Button styling */
+.workshop-overlay .btn {
+    background-color: #660000;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.workshop-overlay .btn:hover {
+    background-color: #990000;
+    transform: scale(1.05);
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+=========================== */
+
+@media screen and (max-width: 768px) {
+    .workshop-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .workshop-card {
+        width: 90%;
+        height: 400px;
+    }
+
+    .workshop-overlay {
+        width: 90%;
+        bottom: 10px;
+        padding: 12px;
+    }
+
+    aside {
+        float: none;
+        width: 85%;
+        margin: 20px auto;
+    }
+
+    section {
+        width: 90%;
+    }
+}
+
+/* ===========================
+   WORKSHOP BENEFITS SECTION
+=========================== */
+.benefits-section {
+    background-color: #fff5e1;
+    border: 3px solid #990000;
+    border-radius: 25px;
+    width: 80%;
+    margin: 60px auto;
+    padding: 40px 50px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.benefits-section h2 {
+    color: #660000;
+    font-size: 28px;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.benefits-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    line-height: 2;
+    color: #4d0000;
+}
+
+.benefits-section li {
+    background-color: #fce3cc;
+    border-radius: 12px;
+    padding: 12px 20px;
+    margin: 10px 0;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.benefits-section li:hover {
+    transform: scale(1.03);
+    background-color: #ffd9b3;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===========================
+   WORKSHOP COURSE TABLE
+=========================== */
+
+.course-table-section {
+    width: 85%;
+    margin: 60px auto 100px auto;
+    background-color: #fff5e1;
+    border-radius: 25px;
+    border: 3px solid #990000;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.course-table-section h2 {
+    font-size: 28px;
+    color: #660000;
+    margin-bottom: 25px;
+}
+
+.course-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 17px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.course-table th {
+    background-color: #990000;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.course-table td {
+    border: 1.5px solid #800000;
+    padding: 15px;
+    background-color: #fff5e1;
+    color: #4d0000;
+    vertical-align: top;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.course-table tr:hover td {
+    background-color: #ffd9b3;
+    transition: background-color 0.3s ease;
+}
+
+
+/* ===========================
+   HIGHLIGHT ANIMATION (Cell-based Fix)
+=========================== */
+@keyframes highlightFade {
+  0% {
+    background-color: #fff8b3;
+    box-shadow: 0 0 20px #ffeb80 inset;
+  }
+  50% {
+    background-color: #fff176;
+    box-shadow: 0 0 25px #ffea00 inset;
+  }
+  100% {
+    background-color: #fff5e1;
+    box-shadow: none;
+  }
+}
+
+.highlighted td {
+  animation: highlightFade 3s ease-in-out;
+  transition: background-color 1s ease;
+}
+
+/* ===========================
+   WORKSHOP PAGE ASIDE SECTION
+=========================== */
+
+.registration-aside {
+  width: 80%;
+  background-color: #fff5e1;
+  border: 3px solid #990000;
+  border-radius: 15px;
+  padding: 25px 30px;
+  margin: 50px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: #4d0000;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.registration-aside h2 {
+  color: #660000;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.registration-aside a {
+  color: #990000;
+  font-weight: bold;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.registration-aside a:hover {
+  color: #660000;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .registration-aside {
+    width: 90%;
+    font-size: 16px;
+    padding: 20px;
+  }
+}
+
 /* footer */
 
 footer {
