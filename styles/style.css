@@ -133,13 +133,14 @@ nav {
 /* Profile Pages */
 
 .pfp {
-    width: 40%;
+    width: 30%;
     height: auto;
 }
 
 .profile-table {
-    width: 95%;
+    width: 60%;
     max-width: 950px;
+    background-color: #ffffff;
     border: 1px solid #000000;
     border-collapse: collapse;
     margin: 20px auto;
@@ -229,6 +230,7 @@ input[type = text]:focus,
 input[type = email]:focus,
 input[type = tel]:focus,
 input[type = date]:focus,
+input[type = password]:focus,
 textarea:focus,
 input[type = submit]:hover,
 input[type = reset]:hover,
@@ -374,12 +376,12 @@ select {
     margin: 30px 10px;
 }
 
-.product-gallery div {
+.product-gallery figure {
     text-align: center;
     width: 70%;
 }
 
-.product-gallery div img {
+.product-gallery figure img {
     height: 500px;
     width: 400px;
     border-radius: 8px;
@@ -424,8 +426,8 @@ select {
     width: auto;
     margin: 10px;
     padding: 20px;
+    border: 3px solid #660000; 
     background-color: #fffaf7;
-    border: 1px solid #f0dcd3;
     border-radius: 10px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.08);
 }
@@ -580,9 +582,9 @@ h1 {
   background: #fff5e1;
   border: 3px solid #990000;
   border-radius: 15px;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
-  height: 450px;
+  height: auto;
   color: #4d0000;
   box-shadow: 0 6px 14px rgba(0,0,0,0.1);
 }
