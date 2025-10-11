@@ -626,7 +626,7 @@ select {
 .product-gallery figure img:hover,
 .product-section:hover,
 .product-aside:hover {
-  transform: scale(1.01);
+  transform: scale(1.03);
   box-shadow: 0 8px 10px rgba(0,0,0,0.08);
 }
 
