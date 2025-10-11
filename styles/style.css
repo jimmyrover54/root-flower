@@ -1,3 +1,7 @@
+/*contributions from each member will be labelled using [member name]>>>>> (start) and >>>>>[member name} (end)*/
+
+/*Azmain>>>>>*/
+
 /* general */
 
 body {
@@ -21,12 +25,11 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    /*display: flex;
-    gap: 12px;*/
 }
 
 .white-text,
-.white-text a {
+.white-text a,
+.white-text h1 {
     color:  #ffffff;
 }
 
@@ -38,14 +41,6 @@ ul {
     align-items: center;
 }
 
-.content h2 {
-    margin-top: px;
-}
-
-.content p {
-    font-size: 1.1rem;
-    line-height:1.5;
-}
 
 /* header, navbar */
 
@@ -71,6 +66,7 @@ header {
     height: 70px;
     width: auto;
     margin: 10px 20px;
+    border-radius: 30%;
 }
 
 nav {
@@ -130,20 +126,117 @@ nav {
     margin: 0 20px;
 }
 
+/* Homepage */
+
+.hero {
+  height: 40vh; 
+  width: inherit;
+  box-sizing: border-box;
+  background-image: url(/styles/images/homebg2.png);
+  background-position: center;
+  background-size: cover;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  line-height: 35px;
+}
+
+.products-showcase {
+  width: inherit;
+  background-color: #ffffff;
+  border: 2px solid  #800000;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 30px 0;
+  box-sizing: border-box;
+}
+
+.products-showcase h2 {
+  margin: 0 0 10px 0;
+}
+
+.products-container {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.products-item {
+  height: 450px;
+  width: 375px;
+  background-position: center;
+  background-size: cover;
+  background-color: #000000;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.products-item:hover {
+  transform: scale(1.05);
+  opacity: 0.7;
+}
+
+.products-item p {
+  position: absolute;
+  opacity: 0;
+}
+
+.products-item:hover p {
+  opacity: 1;
+}
+
+.products-item p a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#products-bouquets {
+  background-image: url(../images/Bouquets/handbouquet3.jpg);
+}
+
+#products-cny {
+  background-image: url(../images/CNY/cny3.jpg);
+}
+
+#products-grand-openings {
+  background-image: url(../images/Graduation/Pd4pic4.png);
+}
+
+#products-graduations {
+  background-image: url(../images/GrandOpening/pd3pic3.png);
+}
+
 /* Profile Pages */
 
 .pfp {
-    width: 30%;
+    width: 25%;
     height: auto;
+    border: 2px groove #4d0000;
+    border-radius: 10%;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.profile-info {
+  width: 25%;
+  /* background-color: #ffffff;
+  border: 2px solid #4d0000;
+  border-radius: 15px; */
+  margin-bottom: 20px;
 }
 
 .profile-table {
     width: 60%;
     max-width: 950px;
     background-color: #ffffff;
-    border: 1px solid #000000;
+    border: 2px solid #4d0000;
     border-collapse: collapse;
-    margin: 20px auto;
+    margin-bottom: 20px;
     font-size: 25px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -153,6 +246,25 @@ nav {
     border: 1px solid #000000;
     padding: 10px;
 }
+
+.profile-header {
+  text-align: center;
+  font-size: 200%;
+  margin: 0;
+}
+
+.student-id {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.course {
+  color: rgb(77, 0, 0)
+}
+
+
+/*>>>>>Azmain*/
+
+/*Chan>>>>>*/
 
 /* Additional Profile Content */
 .profile-pic {
@@ -184,6 +296,10 @@ nav {
     text-align: center;
     text-decoration: underline;
 }
+
+/*>>>>>Chan*/
+
+/*Azmain>>>>>*/
 
 /*forms*/
 
@@ -320,7 +436,11 @@ select {
     padding: 10px;
 }
 
-/* ===== Product Page Gallery (Jimmy) ===== */
+/*>>>>>Azmain*/
+
+/*Wei>>>>>*/
+
+/* ===== Product Page Gallery ===== */
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -349,7 +469,11 @@ select {
     margin-top: 5px;
 }
 
-/* Product (CCH) */
+/*>>>>>Wei*/
+
+/*Chan>>>>>*/
+
+/* Product */
 
 
 .product-content {
@@ -402,7 +526,7 @@ select {
   color: #660000;
 }
 
-/* Product Align (CCH) */ 
+/* Product Align */ 
 
 .product-main {
   display: block; 
@@ -420,7 +544,7 @@ select {
   margin: 20px 0;
 }
 
-/* Product page specific sections (CCH) */
+/* Product page specific sections */
 .product-section {
     text-align: center;
     width: auto;
@@ -468,7 +592,7 @@ select {
     margin: 8px 0;
 }
 
-/* Product page aside box (CCH) */
+/* Product page aside box */
 .product-aside {
     width: 10%; 
     height: auto;
@@ -489,6 +613,10 @@ select {
 .product-aside p {
     color: #333;
 }
+
+/*>>>>>Chan*/
+
+/*Dhirrenn>>>>>*/
 
 /* WORKSHOP PAGE STYLES */
 html { scroll-behavior: smooth; }
@@ -791,6 +919,9 @@ html { scroll-behavior: smooth; }
   .promo-inline-aside, .promo-section, .promo-hero { width: 90%; }
 }
 
+/*>>>>>Dhirrenn*/
+
+/*Azmain>>>>>*/
 
 /* footer */
 
@@ -819,3 +950,4 @@ footer div ul li:hover {
     text-decoration: underline;
 }
 
+/*>>>>>Azmain*/
