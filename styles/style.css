@@ -485,45 +485,39 @@ select {
 
 
 .product-content {
-    display: block;
-    align-items: center;
-    width: 90vw;
+  display: block;
+  align-items: center;
+  width: 90vw;
 }
 
 .product-content h1 {
-    text-align: center;
-    margin-top: 30px;
+  text-align: center;
+  margin-top: 30px;
 }
 
 .product-content h2, p {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .product-gallery {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 15px;
-    justify-items: center;
-    align-items: start;
-    margin: 30px 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 15px;
+  justify-items: center;
+  align-items: start;
+  margin: 30px 10px;
+  box-sizing: border-box;
 }
 
 .product-gallery figure {
-    text-align: center;
-    width: 70%;
+  text-align: center;
 }
 
 .product-gallery figure img {
-    height: 500px;
-    width: 400px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-
-.product-gallery img:hover {
-    transform: scale(1.05);
+  height: 600px;
+  width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .product-gallery figcaption {
@@ -621,14 +615,19 @@ select {
     color: #333;
 }
 
+.product-gallery figure img,
 .product-section,
 .product-aside {
-  transition: 0.3s;
+  transition: 0.2s;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08);
 }
 
+
+.product-gallery figure img:hover,
 .product-section:hover,
 .product-aside:hover {
-  transform: scale(1.02);
+  transform: scale(1.01);
+  box-shadow: 0 8px 10px rgba(0,0,0,0.08);
 }
 
 /*>>>>>Chan*/
@@ -645,6 +644,7 @@ select {
   flex-direction: column;
   align-items: center;
 }
+
 .workshop-grid > p {
   color: #4d0000;
   font-size: 17px;
@@ -661,7 +661,7 @@ select {
 .workshop-box {
   display: flex;
   align-items: center;
-  width: 600px;
+  width: 700px;
   height: inherit;
   border: 2px solid #4d0000;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -680,7 +680,7 @@ select {
 .chat-bubble {
   width: 50%;
   height: inherit;
-  background: #fff5e1;
+  background: #ffe6e6;
   padding: 18px;
   box-sizing: border-box;
   color: #4d0000;
@@ -710,6 +710,7 @@ select {
   margin: 40px auto;
   box-shadow: 0 6px 14px rgba(0,0,0,0.1);
   box-sizing: border-box;
+  transition: 0.2s;
 }
 .float-aside h2 {
   color: #660000;
@@ -742,6 +743,7 @@ select {
   padding: 25px;
   box-shadow: 0 6px 14px rgba(0,0,0,0.1);
   box-sizing: border-box;
+  transition: 0.2s;
 }
 .course-table {
   width: 100%;
@@ -773,10 +775,14 @@ select {
 /* ENHANCEMENTS – WORKSHOP PAGE */
 /* Enhancement 1: 3D Lift & Glow on Hover */
 
+.course-table-section:hover,
+.float-aside:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 14px rgba(153, 0, 0, 0.4);
+}
 .workshop-box:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 10px 25px rgba(153, 0, 0, 0.4);
-  border-color: #ff4d4d;
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 8px 10px rgba(153, 0, 0, 0.4);
 }
 
 /* Enhancement 2: Fade-In Effect */
@@ -875,8 +881,8 @@ figcaption ul {
 /* Enhancement 3: Promo Card Glow on Hover */
 .promo-section:hover,
 .promo-section figure:hover {
-  transform: scale(1.01);
-  box-shadow: 0 0 10px rgba(153, 0, 0, 0.4);
+  transform: scale(1.005);
+  box-shadow: 0 0 5px rgba(153, 0, 0, 0.4);
 }
 
 /* Enhancement 4: Animated Gradient Buttons */
