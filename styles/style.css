@@ -492,93 +492,69 @@ select {
 
 /* WORKSHOP PAGE STYLES */
 html { scroll-behavior: smooth; }
-h1 {
-  font: bold 32px "Bookman Old Style", serif;
-  color: #660000;
-  text-align: center;
-  margin: 25px 0;
-}
 
-/* Workshop Cards */
-.workshop-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
+.workshop-grid {
   width: 85%;
   margin: 40px auto;
-}
-.workshop-card {
-  position: relative;
-  width: 300px;
-  height: 420px;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  transition: 0.3s;
-}
-.workshop-card:hover { transform: translateY(-6px); }
-.workshop-card img { width: 100%; height: 100%; object-fit: cover; }
-.workshop-overlay {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translate(-50%,150%);
-  width: 85%;
-  background: #fff;
-  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
   text-align: center;
-  padding: 10px;
+}
+.workshop-grid > p {
   color: #4d0000;
-  opacity: 0;
-  transition: 0.4s;
+  font-size: 17px;
+  margin-bottom: 25px;
 }
-.workshop-card:hover .workshop-overlay { opacity: 1; transform: translate(-50%,0); }
-.btn {
-  display: inline-block;
-  background: #660000;
-  color: #fff;
-  padding: 6px 12px;
-  border-radius: 6px;
-  text-decoration: none;
-}
-.btn:hover { background: #990000; }
-
-/* Benefits & Aside */
-.benefits-aside-container {
+.workshop-row {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
+}
+.workshop-box {
+  display: flex;
   align-items: flex-start;
-  width: 85%;
-  margin: 20px auto;
   gap: 15px;
+  width: 48%;
+}
+.workshop-box.left { flex-direction: row; }
+.workshop-box.right { flex-direction: row-reverse; text-align: right; }
+
+/*  IMAGES  */
+.chat-img {
+  width: 330px;
+  height: 445px;
+  border: 3px solid #990000;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-.benefits-section {
-  flex: 3;
+/*  CHAT BUBBLES */
+.chat-bubble {
+  flex: 1;
   background: #fff5e1;
-  border: 3px solid #990000;
-  border-radius: 20px;
-  padding: 25px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-}
-.benefits-section h2 {
-  color: #660000;
-  text-align: center;
-  border-bottom: 2px solid #990000;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
-}
-.benefits-section li {
-  list-style: none;
-  background: #fce3cc;
-  margin: 8px 0;
-  padding: 8px;
-  border-radius: 8px;
+  border: 2px solid #990000;
+  border-radius: 18px;
+  padding: 18px;
   color: #4d0000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-size: 16px;
+  line-height: 1.6;
 }
+.chat-bubble h2 {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+.chat-bubble ul {
+  margin: 8px 0 0 18px;
+  list-style: disc;
+}
+
+/*  ASIDE  */
 .float-aside {
   flex: 1;
+  width: 85%;
   background: #fff5e1;
   border: 3px solid #990000;
   border-radius: 15px;
@@ -586,33 +562,37 @@ h1 {
   text-align: center;
   height: auto;
   color: #4d0000;
+  margin: 40px auto;
   box-shadow: 0 6px 14px rgba(0,0,0,0.1);
 }
 .float-aside h2 {
   color: #660000;
   border-bottom: 2px solid #990000;
+  display: inline-block;
   padding-bottom: 5px;
+  margin-bottom: 10px;
 }
 .aside-btn {
-  display: block;
-  width: 80%;
-  margin: 10px auto;
-  background: linear-gradient(#990000,#660000);
+  display: inline-block;
+  background: linear-gradient(#990000, #660000);
   color: #fff;
-  padding: 8px;
+  padding: 10px 20px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  margin: 8px;
 }
-.aside-btn:hover { background: linear-gradient(#b30000,#7a0000); }
+.aside-btn:hover {
+  background: linear-gradient(#b30000, #7a0000);
+}
 
-/* Course Table */
+/*  COURSE TABLE */
 .course-table-section {
   width: 85%;
-  margin: 50px auto;
+  margin: 40px auto;
   background: #fff5e1;
   border: 3px solid #990000;
-  border-radius: 20px;
+  border-radius: 18px;
   padding: 25px;
   box-shadow: 0 6px 14px rgba(0,0,0,0.1);
 }
@@ -629,168 +609,152 @@ h1 {
 .course-table td {
   border: 1.5px solid #800000;
   background: #fff5e1;
-  padding: 10px;
   color: #4d0000;
+  padding: 10px;
 }
 .course-table tr:hover td { background: #ffd9b3; }
 
-/* Responsive */
-@media (max-width:900px) {
-  .benefits-aside-container,
-  .workshop-container { flex-direction: column; align-items: center; }
-  .float-aside, .benefits-section, .course-table-section { width: 90%; height: auto; }
+/*  RESPONSIVE  */
+@media (max-width: 900px) {
+  .workshop-row { flex-direction: column; align-items: center; }
+  .float-aside, .course-table-section { width: 90%; height: auto; text-align: center; }
+  .chat-img { width: 90%; height: auto; }
+  .chat-bubble { width: 90%; margin-top: 10px; }
 }
 
-/* PROMOTIONS PAGE */
-html { scroll-behavior: smooth; }
-.clear { clear: both; }
 
-/* Hero Banner */
-.promo-hero {
-  width: 60%;
-  margin: 30px auto;
-  padding: 10px;
-  background: #fff5e1;
-  border: 3px solid #990000;
-  border-radius: 18px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+/* ENHANCEMENTS – WORKSHOP PAGE */
+/* Enhancement 1: 3D Lift & Glow on Hover */
+.chat-img {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-.promo-hero img {
-  width: 100%;
-  height: 180px;
-  border-radius: 12px;
-  object-fit: cover;
-  filter: brightness(0.9);
-}
-.promo-hero figcaption {
-  color: #660000;
-  font-style: italic;
-  margin-top: 8px;
+.chat-img:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(153, 0, 0, 0.4);
+  border-color: #ff4d4d;
 }
 
-/* Sections */
+/* Enhancement 2: Fade-In Effect */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.chat-bubble, .chat-img {
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+}
+.chat-img:nth-of-type(1) { animation-delay: 0.2s; }
+.chat-img:nth-of-type(2) { animation-delay: 0.4s; }
+.chat-bubble:nth-of-type(1) { animation-delay: 0.6s; }
+.chat-bubble:nth-of-type(2) { animation-delay: 0.8s; }
+
+/* PROMOTIONS PAGE STYLES */
+
 .promo-section {
   width: 85%;
-  margin: 25px auto;
+  margin: 35px auto;
+  background: #fff5e1;
+  border: 3px solid #990000;
+  border-radius: 20px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+.promo-section figure {
+  display: flex;
+  align-items: center;
+  gap: 25px;
   padding: 25px;
+}
+.promo-img {
+  width: 45%;
+  height: 500px;             
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #990000;
+}
+figcaption {
+  flex: 1;
+  color: #4d0000;
+  font-size: 17px;          
+  line-height: 1.7;
+}
+figcaption h2 {
+  color: #660000;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  margin-bottom: 10px;
+}
+figcaption h3 {
+  color: #800000;
+  margin-top: 14px;
+  font-size: 18px;
+}
+figcaption ul {
+  margin-left: 20px;
+  list-style-type: square;
+}
+
+/*  ASIDE  */
+.promo-aside {
+  width: 85%;
   background: #fff5e1;
   border: 3px solid #990000;
   border-radius: 18px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-.promo-section h2 {
-  color: #660000;
+  padding: 30px;
   text-align: center;
+  color: #4d0000;
+  margin: 45px auto 60px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+.promo-aside h2 {
+  color: #660000;
   border-bottom: 2px solid #990000;
   display: inline-block;
-  margin-bottom: 15px;
   padding-bottom: 5px;
-}
-
-/* Current Offers */
-.offers-aside-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  width: 85%;
-  margin: 0 auto 40px;
-}
-.current-offers { flex: 1 1 70%; }
-
-.deal-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
-}
-.deal-card {
-  background: #fff;
-  border: 2px solid #990000;
-  border-radius: 10px;
-  padding: 15px;
-  text-align: center;
-  color: #4d0000;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-  transition: transform .2s ease;
-}
-.deal-card:hover { transform: translateY(-5px); }
-.badge {
-  background: #990000;
-  color: #fff;
-  padding: 3px 8px;
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-/* Right Aside */
-.promo-inline-aside {
-  width: 28%;
-  background: #fff5e1;
-  border: 3px solid #990000;
-  border-radius: 15px;
-  padding: 20px;
-  text-align: center;
-  color: #4d0000;
-  box-shadow: 0 5px 12px rgba(0,0,0,0.1);
-}
-.promo-inline-aside h2 {
-  color: #660000;
-  border-bottom: 2px solid #990000;
   margin-bottom: 10px;
 }
 .aside-btn {
-  display: block;
-  width: 80%;
-  margin: 10px auto;
-  padding: 10px;
+  display: inline-block;
   background: linear-gradient(#990000, #660000);
   color: #fff;
+  padding: 10px 20px;
   border-radius: 8px;
-  font-weight: bold;
   text-decoration: none;
-  transition: .2s;
+  font-weight: bold;
+  margin: 8px;
 }
-.aside-btn:hover { background: linear-gradient(#b30000,#7a0000); }
-
-/* Table */
-.promo-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: #fff;
-}
-.promo-table th, .promo-table td {
-  padding: 10px;
-  border: 1.5px solid #800000;
-}
-.promo-table th {
-  background: #990000;
-  color: #fff;
-}
-.promo-table td {
-  background: #fff5e1;
-  color: #4d0000;
-}
-.promo-table tr:hover td { background: #ffd9b3; }
-
-/* Lists */
-#how-to-redeem ol, .promo-dl { padding-left: 25px; color: #4d0000; }
-#how-to-redeem li, .promo-dl dd {
-  margin: 8px 0;
-  background: #fff;
-  border-left: 5px solid #990000;
-  border-radius: 8px;
-  padding: 10px;
-  line-height: 1.6;
-}
-.promo-dl dt { color: #660000; font-weight: bold; margin-top: 8px; }
+.aside-btn:hover { background: linear-gradient(#b30000, #7a0000); }
 
 /* Responsive */
-@media (max-width:900px) {
-  .offers-aside-container { flex-direction: column; align-items: center; }
-  .promo-inline-aside, .promo-section, .promo-hero { width: 90%; }
+@media (max-width: 900px) {
+  .promo-section figure { flex-direction: column; }
+  .promo-img { width: 90%; height: auto; }
+  figcaption { text-align: center; font-size: 16px; }
+  .promo-aside, .promo-section { width: 90%; }
 }
 
+
+/* ENHANCEMENTS – PROMOTIONS PAGE */
+/* Enhancement 3: Promo Card Glow on Hover */
+.promo-section:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(153, 0, 0, 0.4);
+  transition: 0.3s ease-in-out;
+}
+
+/* Enhancement 4: Animated Gradient Buttons */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.aside-btn {
+  background: linear-gradient(270deg, #990000, #ff4d4d, #660000);
+  background-size: 200% 200%;
+  animation: gradientMove 6s ease infinite;
+  transition: transform 0.2s ease;
+}
+.aside-btn:hover { transform: scale(1.05); }
 
 /* footer */
 

@@ -6,6 +6,7 @@
   <link href="styles/style.css" rel="stylesheet" />
   <title>Workshops - Root Flower</title>
 </head>
+
 <body>
   <header class="white-text">
     <div class="top">
@@ -46,70 +47,81 @@
   <main class="content">
     <h1>Floral Workshops</h1>
 
-    <!-- Workshop Cards -->
-    <div class="workshop-container">
-      <div class="workshop-card">
-        <img src="styles/images/handtied.jpg" alt="Hand-tied Bouquet Workshop" />
-        <div class="workshop-overlay">
-          <h2>Hand-Tied Bouquet</h2>
-          <p>2 Days | 5 Classes</p>
-          <a href="#handtied-row" class="btn">Read More</a>
-        </div>
-      </div>
+<section class="workshop-grid">
 
-      <div class="workshop-card">
-        <img src="styles/images/florist.jpg" alt="Florist-to-Be Workshop" />
-        <div class="workshop-overlay">
-          <h2>Florist-To-Be 1 & 2</h2>
-          <p>4 Days | 9 Classes</p>
-          <a href="#florist-row" class="btn">Read More</a>
-        </div>
-      </div>
-
-      <div class="workshop-card">
-        <img src="styles/images/hobby.jpg" alt="Hobby Class" />
-        <div class="workshop-overlay">
-          <h2>Hobby Class</h2>
-          <p>1 Class per Month<br />18 Oct | 13 Sep | 30 Aug</p>
-          <a href="#hobby-row" class="btn">Read More</a>
-        </div>
+  <div class="workshop-row">
+    <div class="workshop-box left">
+      <img src="styles/images/workshop1.jpg" alt="Florist To Be 1" class="chat-img">
+      <div class="chat-bubble">
+        <h2>Florist To Be 1</h2>
+        <p>Learn the essentials of floral design and create stunning bouquets for all occasions.</p>
+        <ul>
+          <li>Korean Bouquet</li>
+          <li>Russian Bouquet</li>
+          <li>Mix Flowers Bouquet</li>
+          <li>Bridal Bouquet</li>
+          <li>Boutineer</li>
+          <li>Flowers Basket</li>
+          <li>Centerpiece</li>
+          <li>Flowers Stand</li>
+        </ul>
       </div>
     </div>
 
-    <!-- Workshop Benefits -->
-   <div class="benefits-aside-container">
-  
-  <!-- Workshop Benefits (Left) -->
-  <section class="benefits-section">
-    <h2>Workshop Benefits</h2>
-    <ul>
-      <li>🌸 Learn directly from experienced florists</li>
-      <li>🌼 All tools and fresh flowers provided</li>
-      <li>💐 Take home your own bouquet or creation</li>
-      <li>🌻 Meet new people who share your love for flowers</li>
-      <li>🪻 Discover seasonal flower arrangement techniques</li>
-    </ul>
-  </section>
 
-  <!-- Aside (Right) -->
-  <aside class="float-aside">
-  <h2>Join & Save 🌸</h2>
-  <p>
-    Register now to secure your spot for our next workshop!
-  </p>
+    <div class="workshop-box right">
+      <img src="styles/images/workshop2.jpg" alt="Florist To Be 2" class="chat-img">
+      <div class="chat-bubble">
+        <h2>Florist To Be 2 (Advanced)</h2>
+        <p>Advance your skills with professional florist techniques and unique arrangement styles.</p>
+        <ul>
+          <li>Natural Design Bouquet</li>
+          <li>Spiral Handtied Layers</li>
+          <li>Korean Bouquet</li>
+          <li>Russian Bouquet</li>
+          <li>Bridal Bouquet</li>
+          <li>Flowers Basket</li>
+          <li>Flowers Box</li>
+          <li>Mirror Flowers Stand</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-  <a href="workshop_form.html" class="aside-btn">Workshop Registration</a>
+  <div class="workshop-row">
+    <div class="workshop-box left">
+      <img src="styles/images/workshop3.jpg" alt="Handtied Bouquet" class="chat-img">
+      <div class="chat-bubble">
+        <h2>Handtied Bouquet</h2>
+        <p>Focuses on mastering bouquet wrapping and layering to create elegant hand-tied designs.</p>
+        <ul>
+          <li>Spiral Handtied – Round Layers</li>
+          <li>Single Stalk Bouquet</li>
+          <li>Classic Layers Bouquet</li>
+          <li>Korean Bouquet</li>
+          <li>Russian Bouquet</li>
+          <li>Mix Flowers Bouquet</li>
+        </ul>
+      </div>
+    </div>
 
-  <p>
-    Members enjoy exclusive offers and rewards!
-  </p>
+    <div class="workshop-box right">
+      <img src="styles/images/workshop4.jpg" alt="Hobby Class" class="chat-img">
+      <div class="chat-bubble">
+        <h2>Hobby Class</h2>
+        <p>Casual classes for those who love flowers and wish to explore creative floral art each month.</p>
+        <ul>
+          <li>Mix Flowers Bouquet</li>
+          <li>Flowers Basket</li>
+          <li>Centerpiece</li>
+          <li>Flowers Box</li>
+          <li>Monthly Themed Arrangements</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <a href="promo.html" class="aside-btn">See Our Promotions</a>
-</aside>
-
-</div>
-
-    <!-- Workshop Course Table -->
     <section class="course-table-section">
       <h2>Types of Flower Art in Each Workshop</h2>
       <table class="course-table">
@@ -152,13 +164,24 @@
           <tr id="hobby-row">
             <td>Hobby Class</td>
             <td>
-              Mix Flowers Bouquet<br />
-              Seasonal Special Arrangement (varies monthly)
+              Mix Flowers Bouquet<br>
+              Seasonal Arrangement (varies monthly)
             </td>
           </tr>
         </tbody>
       </table>
     </section>
+
+    <aside class="float-aside">
+      <h2>Join & Save 🌸</h2>
+      <p>Register now to secure your spot for our next workshop!</p>
+      <a href="workshop_form.html" class="aside-btn">Workshop Registration</a>
+      <p>Members enjoy exclusive offers and rewards!</p>
+      <a href="promo.html" class="aside-btn">See Our Promotions</a>
+    </aside>
+    <br>
+    <br>
+
   </main>
 
     <footer class="white-text">
