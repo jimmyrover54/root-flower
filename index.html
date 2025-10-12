@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Azmain Taraqqi">
+    <meta name="keywords" content="HTML5, Root Flower, Homepage">
+    <meta name="description" content="Homepage for Root Flower">
     <link href="styles/style.css" rel="stylesheet">
     <title>Home - Root Flower</title>
 </head>
@@ -47,46 +50,75 @@
         </nav>
     </header>
 
-    <div class="content">
+    <main class="content">
         <section class="hero white-text">
             <h1>Welcome to Root Flower.</h1>
             <article>
                 <h2></h2>
-                We are an organization of florists based in Kuching, Sarawak.<br> We provide a variety of flower arrangements for different occasions; which include handmade bouquets, floral wreaths and tasteful decor.<br> We also conduct workshops for those who are interested in learning the art of floristry. <br>Thank you for visiting our website!
+                We are an organization of florists based in Kuching, Sarawak.<br>
+                We provide a variety of flower arrangements for different occasions; which include handmade bouquets, floral wreaths and tasteful decor.<br>
+                We also conduct workshops for those who are interested in learning the art of floristry. <br>
+                Thank you for visiting our website!
             </article>
         </section>
-        <section class="products-showcase">
+        <section class="showcase" id="products-showcase">
             <h2>Browse through our catalogue:</h2>
             <div class="products-container">
-                <div class="products-item" id="products-bouquets">
-                    <p><a href="product1.html">Handmade Bouquets</a></p>
-                </div>
-                <div class="products-item" id="products-cny">
-                    <p><a href="product2.html">Chinese New Year Decorations</a></p>
-                </div>
-                <div class="products-item" id="products-grand-openings">
-                    <p><a href="product3.html">Grand Openings</a></p>
-                </div>
-                <div class="products-item" id="products-graduations">
-                    <p><a href="product4.html">Graduation Ceremonies</a></p>
-                </div>
+                <figure class="products-item" id="products-bouquets">
+                    <img src="images/Bouquets/handbouquet3.jpg" alt="hand bouquets">
+                    <figcaption><a href="product1.html">Handmade Bouquets</a></figcaption>
+                </figure>
+                <figure class="products-item" id="products-cny">
+                    <img src="images/CNY/cny3.jpg" alt="chinese new year themed bouquets">
+                    <figcaption><a href="product2.html">Chinese New Year Decorations</a></figcaption>
+                </figure>
+                <figure class="products-item" id="products-grand-openings">
+                    <img src="images/GrandOpening/pd3pic3.png" alt="grand opening bouquets">
+                    <figcaption><a href="product3.html">Grand Openings</a></figcaption>
+                </figure>
+                <figure class="products-item" id="products-graduations">
+                    <img src="images/Graduation/Pd4pic4.png" alt="graduation themed bouquets">
+                    <figcaption><a href="product4.html">Graduation Ceremonies</a></figcaption>
+                </figure>
             </div>
         </section>
-    </div>
+        <section class="showcase">
+            <h2>Check out our workshops:</h2>
+            <figure class="workshops-promo-container">
+                <img src="images/Workshops/workshop1.jpg" alt="workshop sample">
+                <figcaption>
+                    Our <strong>Florist To Be 1</strong> workshop is the perfect program for aspiring florists to get started on their floristry journey.<br>
+                    This workhop includes lessons on how to make flower stands, baskets, boutineers and bouquets of various different styles and aesthetics.<br>
+                    <a href="workshops.html">Click here for info on this workshop and more!</a>
+                </figcaption>
+            </figure>
+        </section>
+        <section class="showcase">
+            <h2>Cash in on givaways and discount offers:</h2>
+            <figure class="workshops-promo-container">
+                <img src="images/Promo/promotions2.png" alt="promo sample">
+                <figcaption>
+                    Get into the festive spirit with our <strong>Christmas Floral Workshop</strong>!<br>
+                    Three lucky winners will enjoy a hands-on floral experience on <strong>23 Dec 2023 (3PM–5PM)</strong>.<br>
+                    <a href="promo.html">Click here for more giveaways and offers!</a>
+                </figcaption>
+            </figure>
+        </section>
+    </main>
 
     <footer class="white-text">
-        <div class="fabout">
+        <div>
             About Us:
-            <ul class="aboutlist">
+            <ul>
                 <li><a href="aboutme1.html">Azmain Taraqqi</a></li>
                 <li><a href="aboutme2.html">Wei Hang Lee</a></li>
                 <li><a href="aboutme3.html">Dhirrennraj Vijayaraj</a></li>
                 <li><a href="aboutme4.html">Chan Chun Hui</a></li>
             </ul>
         </div>
-        <div class="fcontact">
+        <div>
             Contact Us:
-            <ul class="contactlist">
+            <ul>
                 <li>
                     <a href="mailto:105804016@students.swinburne.edu.my">105804016@students.swinburne.edu.my</a>
                 </li>
@@ -99,6 +131,13 @@
                 <li>
                     <a href="mailto:101235900@students.swinburne.edu.my">101235900@students.swinburne.edu.my</a>
                 </li>
+            </ul>
+        </div>
+        <div>
+            Project Info:
+            <ul>
+                <li><a href="enhancements.html">Enhancements</a></li>
+                <li><a href="acknowledgements.html">Acknowledgements</a></li>
             </ul>
         </div>
     </footer>

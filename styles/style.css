@@ -7,7 +7,7 @@
 body {
     font-family: "URW Bookman L", serif;
     color: #4d0000;
-    background-color:#ff8866 ;
+    background-color:#ff9977 ;
     width: auto;
     min-height: 100vh;
     margin: 0;
@@ -89,6 +89,7 @@ nav {
     margin: 0 20px;
     padding: 8px;
     border-radius: 5px;
+    transition: 0.1s;
 }
 
 .nav-menu li:hover,
@@ -112,6 +113,7 @@ nav {
 .dropdown-content li {
     margin: 0;
     padding: 15px;
+    transition: 0.1s;
 }
 
 .dropdown-content li:hover {
@@ -141,18 +143,18 @@ nav {
   line-height: 35px;
 }
 
-.products-showcase {
+.showcase {
   width: inherit;
-  background-color: #ffffff;
+  /* background-color: #ffe6e6;
   border: 2px solid  #800000;
   border-radius: 15px;
-  padding: 20px;
+  padding: 20px; */
   margin: 30px 0;
   box-sizing: border-box;
 }
 
-.products-showcase h2 {
-  margin: 0 0 10px 0;
+.showcase h2 {
+  margin: 0 0 20px 0;
 }
 
 .products-container {
@@ -165,10 +167,9 @@ nav {
 .products-item {
   height: 450px;
   width: 375px;
-  background-position: center;
-  background-size: cover;
   background-color: #000000;
   border-radius: 15px;
+  margin: 0 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -176,38 +177,67 @@ nav {
 }
 
 .products-item:hover {
-  transform: scale(1.05);
-  opacity: 0.7;
+  transform: scale(1.03);
 }
 
-.products-item p {
+.products-item img {
+  height: inherit;
+  width: inherit;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.products-item:hover img {
+  opacity: 0.5;
+}
+
+.products-item figcaption {
+  font-size: 20px;
   position: absolute;
   opacity: 0;
+  transition: 0.3s;
 }
 
-.products-item:hover p {
+.products-item:hover figcaption {
   opacity: 1;
 }
 
-.products-item p a {
-  color: inherit;
+.products-item figcaption a {
+  color: #ffffff;
   text-decoration: none;
 }
 
-#products-bouquets {
-  background-image: url(../images/Bouquets/handbouquet3.jpg);
+.workshops-promo-container {
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffe6e6;
+  border: 2px solid #4d0000;
+  border-radius: 15px;
+  transition: 0.3s;
 }
 
-#products-cny {
-  background-image: url(../images/CNY/cny3.jpg);
+.workshops-promo-container:hover {
+  transform: scale(1.01);
+  box-shadow: 4px 6px 10px #000000;
 }
 
-#products-grand-openings {
-  background-image: url(../images/Graduation/Pd4pic4.png);
+.workshops-promo-container img {
+  height: 600px;
+  width: 500px;
+  border: 1px solid #4d0000;
+  border-radius: 15px;
 }
 
-#products-graduations {
-  background-image: url(../images/GrandOpening/pd3pic3.png);
+.workshops-promo-container figcaption {
+  font-size: 25px;
+  margin: 0 30px;
+}
+
+.workshops-promo-container figcaption a {
+  color: #dd0000;
 }
 
 /* Profile Pages */
@@ -259,6 +289,15 @@ nav {
 
 .course {
   color: rgb(77, 0, 0)
+}
+
+.enhancements-section {
+  background-color: #ffe6e6;
+  width: inherit;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 15px;
+  box-sizing: border-box;
 }
 
 
@@ -358,7 +397,7 @@ input[type = submit]:hover,
 input[type = reset]:hover,
 select:hover
  {
-    background-color: #dddddd;
+    background-color: #ffe6e6;
     transform: scale(1.01);
 }
 
@@ -826,24 +865,24 @@ select {
   border-radius: 12px;
   border: 2px solid #990000;
 }
-figcaption {
+.promofig figcaption {
   flex: 1;
   color: #4d0000;
   font-size: 17px;          
   line-height: 1.7;
 }
-figcaption h2 {
+.promofig figcaption h2 {
   color: #660000;
   text-decoration: underline;
   text-underline-offset: 4px;
   margin-bottom: 10px;
 }
-figcaption h3 {
+.promofig figcaption h3 {
   color: #800000;
   margin-top: 14px;
   font-size: 18px;
 }
-figcaption ul {
+.promofig figcaption ul {
   margin-left: 20px;
   list-style-type: square;
 }
@@ -873,7 +912,7 @@ figcaption ul {
 @media (max-width: 900px) {
   .promo-section figure { flex-direction: column; }
   .promo-img { width: 90%; height: auto; }
-  figcaption { text-align: center; font-size: 16px; }
+  .promofig figcaption { text-align: center; font-size: 16px; }
   .promo-aside, .promo-section { width: 90%; }
 }
 
@@ -903,8 +942,6 @@ figcaption ul {
 
 /*Azmain>>>>>*/
 
-
-
 /* footer */
 
 footer {
@@ -914,7 +951,7 @@ footer {
     min-height: 30vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     font-style:italic;
 }
 
