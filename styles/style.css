@@ -145,10 +145,6 @@ nav {
 
 .showcase {
   width: inherit;
-  /* background-color: #ffe6e6;
-  border: 2px solid  #800000;
-  border-radius: 15px;
-  padding: 20px; */
   margin: 30px 0;
   box-sizing: border-box;
 }
@@ -237,6 +233,10 @@ nav {
 }
 
 .workshops-promo-container figcaption a {
+  color: #4d0000;
+}
+
+.workshops-promo-container figcaption a:hover {
   color: #dd0000;
 }
 
@@ -254,9 +254,6 @@ nav {
 
 .profile-info {
   width: 25%;
-  /* background-color: #ffffff;
-  border: 2px solid #4d0000;
-  border-radius: 15px; */
   margin-bottom: 20px;
 }
 
@@ -484,39 +481,6 @@ select {
 }
 
 /*>>>>>Azmain*/
-
-/*Wei>>>>>*/
-
-/* ===== Product Page Gallery ===== */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    margin: 20px 0;
-}
-
-.gallery figure {
-    width: 300px;
-    text-align: center;
-    border: 1px solid #f3b1c1;
-    border-radius: 10px;
-    padding: 10px;
-    background-color: #fff0f5;
-}
-
-.gallery img {
-    width: 100%;
-    border-radius: 8px;
-}
-
-.gallery figcaption {
-    font-size: 0.9em;
-    color: #555;
-    margin-top: 5px;
-}
-
-/*>>>>>Wei*/
 
 /*Chan>>>>>*/
 
@@ -811,9 +775,6 @@ select {
 }
 
 
-/* ENHANCEMENTS – WORKSHOP PAGE */
-/* Enhancement 1: 3D Lift & Glow on Hover */
-
 .course-table-section:hover,
 .float-aside:hover {
   transform: scale(1.01);
@@ -824,16 +785,6 @@ select {
   box-shadow: 0 8px 10px rgba(153, 0, 0, 0.4);
 }
 
-/* Enhancement 2: Fade-In Effect */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(15px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.chat-img:nth-of-type(1) { animation-delay: 0.2s; }
-.chat-img:nth-of-type(2) { animation-delay: 0.4s; }
-.chat-bubble:nth-of-type(1) { animation-delay: 0.6s; }
-.chat-bubble:nth-of-type(2) { animation-delay: 0.8s; }
 
 /* PROMOTIONS PAGE STYLES */
 
@@ -917,14 +868,14 @@ select {
 }
 
 /* ENHANCEMENTS – PROMOTIONS PAGE */
-/* Enhancement 3: Promo Card Glow on Hover */
+/* Enhancement 2: Promo Card Glow on Hover */
 .promo-section:hover,
 .promo-section figure:hover {
   transform: scale(1.005);
   box-shadow: 0 0 5px rgba(153, 0, 0, 0.4);
 }
 
-/* Enhancement 4: Animated Gradient Buttons */
+/* Enhancement 3: Animated Gradient Buttons */
 @keyframes gradientMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
