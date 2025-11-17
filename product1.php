@@ -10,45 +10,7 @@
     <title>Hand Bouquets - Root Flower</title>
 </head>
 <body>
-    <header class="white-text">
-        <div class="top">
-            <img class="logo" src="styles/images/logo.jpg">
-            <div id="title"><a href=index.html>root flower</a></div>
-        </div>
-        <nav>
-            <ul class="nav-menu">
-                <li class="dropdown">
-                    Products
-                    <ul class="dropdown-content">
-                        <li><a href="product1.html">Hand Bouquets</a></li>
-                        <li><a href="product2.html">CNY Decorations</a></li>
-                        <li><a href="product3.html">Grand Openings</a></li>
-                        <li><a href="product4.html">Graduation</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    Activities
-                    <ul class="dropdown-content">
-                        <li><a href="workshops.html">Workshops</a></li>
-                        <li><a href="promo.html">Promotions</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    Registration
-                    <ul class="dropdown-content">
-                        <li><a href="workshop_form.html">Workshop Registration</a></li>
-                        <li><a href="membership_form.html">Membership Registration</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="enquiry_form.html">Enquiry Form</a> 
-                </li>
-            </ul>
-            <div id="login">
-                <a href="login_form.html">Login</a>
-            </div>
-        </nav>
-    </header>
+    <?php include 'header.php'; ?>
 
     <main class="product-content">
         <h1>Hand Bouquets</h1>
@@ -88,7 +50,7 @@
                     Trim stems diagonally before placing in water. Change water every 2 days to keep flowers fresh. Avoid direct sunlight or heat exposure.
                 </p>
                 <p>
-                    💐 Join our <a href="workshop_form.html">bouquet-making workshop</a> to learn how to 
+                    💐 Join our <a href="workshop_form.php">bouquet-making workshop</a> to learn how to 
                     craft your own floral masterpiece!
                 </p>
             </aside>
@@ -138,41 +100,6 @@
         </div>
     </main>
 
-    <footer class="white-text">
-        <div class="fabout">
-            About Us:
-            <ul class="aboutlist">
-                <li><a href="aboutme1.html">Azmain Taraqqi</a></li>
-                <li><a href="aboutme2.html">Wei Hang Lee</a></li>
-                <li><a href="aboutme3.html">Dhirrennraj Vijayaraj</a></li>
-                <li><a href="aboutme4.html">Chan Chun Hui</a></li>
-            </ul>
-        </div>
-        <div class="fcontact">
-            Contact Us:
-            <ul class="contactlist">
-                <li>
-                    <a href="mailto:105804016@students.swinburne.edu.my">105804016@students.swinburne.edu.my</a>
-                </li>
-                <li>
-                    <a href="mailto:102788735@students.swinburne.edu.my">102788735@students.swinburne.edu.my</a>
-                </li>
-                <li>
-                    <a href="mailto:102761273@students.swinburne.edu.my">102761273@students.swinburne.edu.my</a>
-                </li>
-                <li>
-                    <a href="mailto:101235900@students.swinburne.edu.my">101235900@students.swinburne.edu.my</a>
-                </li>
-            </ul>
-        </div>
-        <div>
-            Project Info:
-            <ul>
-                <li><a href="enhancements.html">Enhancements</a></li>
-                <li><a href="acknowledgements.html">Acknowledgements</a></li>
-                <li><a href="https://youtu.be/aIVeBDxmBlA">Demonstration Video</a></li>
-            </ul>
-        </div>
-    </footer>
+    <?php include 'footer.php'; ?>
 </body>
 </html>
