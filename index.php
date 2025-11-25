@@ -11,6 +11,7 @@
 </head>
 <body>
     <?php include 'header.php'; ?>
+    <?php include 'db.php'; ?>
 
     <main class="content">
         <section class="hero white-text">
